@@ -17,6 +17,9 @@ const WAMDBService = {
     addUserScore(knexInstance,userName,score){
         // validate user
         // add score to scores table
+        return knexInstance
+            .insert([{user_name:userName,score:parseInt(score)}])
+            .into('scores')
     },
     userLogin(knexInstance,userName,userPass){
         // add new user with userName and md5 hash of pw

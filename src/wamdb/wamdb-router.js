@@ -18,6 +18,14 @@ wamdbRouter
       })
       .catch(next)
   })
+  .post((req, res, next) => {
+    const { user_name, score } = req.body;
+    WAMDBService.addUserScore(req.app.get('db'), user_name, score )
+      .then(r => {
+        res.json(r)
+      })
+      .catch(next)
+  })
 
 wamdbRouter
   .route('/scores/:user_name')
@@ -29,5 +37,6 @@ wamdbRouter
       })
       .catch(next)
   })
+  
 
 module.exports = wamdbRouter
