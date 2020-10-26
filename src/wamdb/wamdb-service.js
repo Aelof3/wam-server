@@ -3,6 +3,10 @@ const WAMDBService = {
         return knexInstance
           .select('*')
           .from('scores')
+          .limit(10)
+          .orderBy([
+              { column: 'score', order: 'ASC' }
+          ])
     },
     searchScoresByUser(knexInstance,userName) {
         return knexInstance

@@ -24,7 +24,7 @@ app.use(helmet())
 app.use(wamdbRouter)
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!')
+  res.send('Whack a mole... 3d!')
 })
 
 app.use(errorHandler)
