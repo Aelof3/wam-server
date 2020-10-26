@@ -16,3 +16,4 @@
 {"message":"insert into \"scores\" (\"score\", \"user_name\") values (DEFAULT, $1), ($2, DEFAULT) - null value in column \"score\" violates not-null constraint","level":"error"}
 {"message":"insert into \"scores\" (\"score\", \"user_name\") values (DEFAULT, $1), ($2, DEFAULT) - null value in column \"score\" violates not-null constraint","level":"error"}
 {"message":"insert into \"scores\" (\"score\", \"user_name\") values ($1, $2) - invalid input syntax for integer: \"NaN\"","level":"error"}
+{"message":"insert into \"scores\" (\"score\", \"user_name\") values ($1, $2) - invalid input syntax for integer: \"NaN\"","level":"error"}
