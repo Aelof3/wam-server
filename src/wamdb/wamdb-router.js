@@ -20,7 +20,7 @@ wamdbRouter
   })
   .post((req, res, next) => {
     const { user_name, score } = req.body;
-    WAMDBService.addUserScore(req.app.get('db'), user_name, score )
+    WAMDBService.addUserScore(req.app.get('db'), user_name.replace(/[^a-zA-Z0-9 ]/gi, ''), score )
       .then(r => {
         res.json(r)
       })
