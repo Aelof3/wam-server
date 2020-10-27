@@ -23,7 +23,8 @@ wamdbRouter
     const { user_name, score, authtoken } = req.body;
     WAMDBService.addUserScore(req.app.get('db'), user_name.replace(/[^a-zA-Z0-9 ]/gi, ''), score, authtoken )
       .then(r => {
-        res.json(r)
+        WAMDBService.deleteAuthToken(req.app.get('db'),authtoken)
+          .then(r=>{res.json(r)})
       })
       .catch(next)
   })

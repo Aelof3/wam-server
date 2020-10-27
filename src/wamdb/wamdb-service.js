@@ -33,6 +33,11 @@ const WAMDBService = {
             .insert([{authtoken:token}])
             .into('auth')
     },
+    deleteAuthToken(knexInstance,token){
+        return knexInstance('auth')
+            .where({authtoken:token})
+            .del()
+    },
     checkAuthToken(knexInstance,token){
         // take auth token and return time difference between time started and now
         return knexInstance
