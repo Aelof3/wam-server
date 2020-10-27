@@ -1,5 +1,4 @@
 require('dotenv').config()
-const uuid = require('uuid/v4')
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
