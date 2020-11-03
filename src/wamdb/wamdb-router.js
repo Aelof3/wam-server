@@ -21,10 +21,10 @@ wamdbRouter
   })
   .post((req, res, next) => {
     const { user_name, score, authtoken } = req.body;
-    WAMDBService.addUserScore(req.app.get('db'), user_name.replace(/[^a-zA-Z0-9 ]/gi, ''), score, authtoken )
+    WAMDBService.addUserScore(req.app.get('db'), user_name.replace(/[^a-zA-Z0-9 ]/gi, '').substring(0,20), score, authtoken )
       .then(r => {
         WAMDBService.deleteAuthToken(req.app.get('db'),authtoken)
-          .then(r=>{res.json(r)})
+          .then(r=>{res.status(201).json(r)})
       })
       .catch(next)
   })
@@ -55,14 +55,8 @@ wamdbRouter
     const { authtoken, score, points } = req.body;
     WAMDBService.checkAuthToken(req.app.get('db'), authtoken )
       .then(r => {
-        // r should be seconds elapsed since start
-        // check score(timer) against seconds elapsed
-        //                    +/- like 5seconds, and greater than 90
-        // then double check that points = 100
-        //if ( r )
-
         let msg = ''
-
+        
         if (!("date_part" in r)) msg += 'cheating: no date_part - likely invalid token!\n';
 
         const secondsElapsed = parseInt(r.date_part)
@@ -76,7 +70,7 @@ wamdbRouter
         
         WAMDBService.validateAuthToken(req.app.get('db'),authtoken,validate)
           .then( r => { 
-            res.json(msg) 
+            res.status(201).json(msg) 
           })
           .catch(next)
       })

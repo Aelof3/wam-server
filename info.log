@@ -41,3 +41,24 @@
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [authtoken] query: select (EXTRACT(EPOCH from (now() - date_started))) from \"auth\" where \"authtoken\" = ? limit ?","level":"error"}
 {"message":"insert into \"scores\" (\"authtoken\", \"score\", \"user_name\") values (DEFAULT, $1, $2) - null value in column \"authtoken\" violates not-null constraint","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [authtoken] query: select (EXTRACT(EPOCH from (now() - date_started))) from \"auth\" where \"authtoken\" = ? limit ?","level":"error"}
+{"message":"aborted","level":"error"}
+{"message":"aborted","level":"error"}
+{"message":"aborted","level":"error"}
+{"message":"Unable to acquire a connection","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot read property 'date_part' of undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Cannot use 'in' operator to search for 'date_part' in undefined","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [authtoken] query: select (EXTRACT(EPOCH from (now() - date_started))) from \"auth\" where \"authtoken\" = ? limit ?","level":"error"}
+{"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [authtoken] query: select (EXTRACT(EPOCH from (now() - date_started))) from \"auth\" where \"authtoken\" = ? limit ?","level":"error"}

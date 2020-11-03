@@ -15,6 +15,7 @@ const WAMDBService = {
           .where({user_name:userName})
     },
     addNewUser(knexInstance,userName,userPass){
+        // if I choose to add logins
         // check to make sure userName does not exist
         // then add user to users table
     },
@@ -26,6 +27,7 @@ const WAMDBService = {
             .insert({authtoken:token,user_name:userName,score:parseInt(score)})
     },
     userLogin(knexInstance,userName,userPass){
+        // if I choose to add logins
         // add new user with userName and md5 hash of pw
     },
     getAuthToken(knexInstance,token){
