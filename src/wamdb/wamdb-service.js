@@ -8,6 +8,12 @@ const WAMDBService = {
               { column: 'score', order: 'ASC' }
           ])
     },
+    deleteOldScores(knexInstance) {
+        console.log('test')
+        return knexInstance('auth')
+            .whereRaw(`date_started < (NOW() - INTERVAL '30 minutes')`)
+            .del()
+    },
     searchScoresByUser(knexInstance,userName) {
         return knexInstance
           .select('*')

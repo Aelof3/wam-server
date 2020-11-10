@@ -47,9 +47,15 @@ wamdbRouter
     const authtoken = uuidv4()
     WAMDBService.getAuthToken(req.app.get('db'),authtoken)
       .then(r => {
+        // after successful token creation, delete all tokens older than 30 minutes
+        WAMDBService.deleteOldScores(req.app.get('db'))
+          .then(d=>{
+            console.log(`DELETED: ${d} OLD ROWS`)
+          })
         res.json({authtoken:authtoken})
       })
       .catch(next)
+    
   })
   .post((req, res, next) => {
     const { authtoken, score, points } = req.body;
