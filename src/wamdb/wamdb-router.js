@@ -66,7 +66,7 @@ wamdbRouter
         if (!("date_part" in r)) msg += 'cheating: no date_part - likely invalid token!\n';
 
         const secondsElapsed = parseInt(r.date_part)
-        if ( secondsElapsed < 95 ) msg += 'cheating: not enough seconds elapsed\n';
+        if ( secondsElapsed < 45 ) msg += 'cheating: not enough seconds elapsed\n';
 
         if (Math.abs(secondsElapsed - score) >= 5) msg += 'cheating: client time != server time elapsed\n';
 
