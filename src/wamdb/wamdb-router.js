@@ -30,10 +30,10 @@ wamdbRouter
   })
 
 wamdbRouter
-  .route('/scores/:user_name')
+  .route('/scores/:userid')
   .get((req, res, next) => {
-    const { user_name } = req.params
-    WAMDBService.searchScoresByUser(req.app.get('db'), user_name)
+    const { userid } = req.params
+    WAMDBService.searchScoresByUser(req.app.get('db'), userid)
       .then(scores => {
         res.json(scores.map(serializeScores))
       })

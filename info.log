@@ -63,3 +63,4 @@
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [authtoken] query: select (EXTRACT(EPOCH from (now() - date_started))) from \"auth\" where \"authtoken\" = ? limit ?","level":"error"}
 {"message":"Undefined binding(s) detected when compiling FIRST. Undefined column(s): [authtoken] query: select (EXTRACT(EPOCH from (now() - date_started))) from \"auth\" where \"authtoken\" = ? limit ?","level":"error"}
 {"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
