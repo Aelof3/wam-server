@@ -62,7 +62,7 @@ ___
 ___
 ## /scores/:userid
 **REQUEST:** 
-`GET /scores/:Raul`
+`GET /scores/Raul`
 **RESPONSE:** 
 ```js
     [
